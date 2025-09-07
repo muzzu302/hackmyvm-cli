@@ -97,8 +97,6 @@ def main():
         auth_manager.configure_credentials()
         return
 
-    # writeup/stats分支只在需要时获取session，其余分支统一处理
-    session = None
     if args.command == 'writeup':
         writeup_module = WriteupModule(None)
         if writeup_module._needs_update():
