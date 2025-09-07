@@ -126,7 +126,7 @@ class AchievementModule:
 
         total = len(records)
         difficulty_stats = {}
-        rank_stats = {'first': 0, 'top3': 0}
+        rank_stats = {'author': 0, 'first': 0, 'top3': 0}
 
         if total > 0:
             for record in records:
@@ -137,8 +137,9 @@ class AchievementModule:
 
                 if rank.isdigit():
                     rank_num = int(rank)
-                    if rank_num == 1: rank_stats['first'] += 1
-                    if rank_num <= 3: rank_stats['top3'] += 1
+                    if rank_num == 1: rank_stats['author'] += 1
+                    elif rank_num == 2: rank_stats['first'] += 1
+                    elif 3 <= rank_num <= 4: rank_stats['top3'] += 1
 
         print(f"[*] Total records: {bcolors.BOLD}{total}{bcolors.ENDC}")
 
@@ -149,9 +150,11 @@ class AchievementModule:
         else:
             print("  No difficulty data found.")
 
-        print_bold_header("Rank Statistics:")
-        print(f"  First place: {bcolors.OKGREEN}{rank_stats['first']}{bcolors.ENDC}")
-        print(f"  Top 3: {bcolors.WARNING}{rank_stats['top3']}{bcolors.ENDC}")
+        if not vm_filter:
+            print_bold_header("Rank Statistics:")
+            print(f"  Author (Rank 1): {bcolors.OKGREEN}{rank_stats['author']}{bcolors.ENDC}")
+            print(f"  First (Rank 2):  {bcolors.FAIL}{rank_stats['first']}{bcolors.ENDC}")
+            print(f"  Top 3 (Ranks 3-4): {bcolors.WARNING}{rank_stats['top3']}{bcolors.ENDC}")
 
         # Determine if to show all records or recent
         show_all = False
@@ -179,7 +182,8 @@ class AchievementModule:
             if rank_colored.isdigit():
                 rank_num = int(rank_colored)
                 if rank_num == 1: rank_colored = f"{bcolors.OKGREEN}#{rank_num}{bcolors.ENDC}"
-                elif rank_num <= 3: rank_colored = f"{bcolors.WARNING}#{rank_num}{bcolors.ENDC}"
+                elif rank_num == 2: rank_colored = f"{bcolors.FAIL}#{rank_num}{bcolors.ENDC}"
+                elif 3 <= rank_num <= 4: rank_colored = f"{bcolors.WARNING}#{rank_num}{bcolors.ENDC}"
                 else: rank_colored = f"#{rank_num}"
 
             table.add_row([
